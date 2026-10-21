@@ -2,10 +2,9 @@ name: StarActions
 
 # Controls when the action will run. 
 on: 
-  watch:
-    types: [started]
   release:
     types: [published]
+  workflow_dispatch:
 
 env:
       images_dir: /opt/images
