@@ -5,7 +5,13 @@ on:
   release:
     types: [published]
   workflow_dispatch:
-
+    inputs:
+      # Единая строка с JSON (как вы и хотели)
+      config_json:
+        description: 'JSON configuration string'
+        required: true
+        default: '{"lanip":"192.168.1.1","signaccount":"admin","signpassword":"admin","wifi2gssid":"Padavan","wifi2gpsk":"12345678","wifi5gssid":"Padavan-5G","wifi5gpsk":"12345678"}'
+        type: string
 env:
       images_dir: /opt/images
 
